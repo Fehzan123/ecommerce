@@ -1,0 +1,260 @@
+/* Reset styles for consistency */
+body, h1, h2, h3, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 100px;
+}
+/* Navigation container styles */
+.navcontainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    align-items: center;
+   width: 100%;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: rgb(3, 3, 3);
+    z-index: 10;
+}
+
+/* Logo styles */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navigation menu styles */
+.navmenu {
+    display: flex;
+    gap: 15px;
+}
+
+.navmenu a {
+    text-decoration: none;
+    color: rgb(7, 7, 7);
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navmenu a:hover {
+    background-color: #555;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Icons section styles */
+.icons {
+    font-size: 1.2rem;
+}
+/* Basic styling */
+
+
+/* Slider container */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+
+   
+    
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    transition: transform 0s ease-in-out;
+}
+
+/* Slider images */
+.slider img {
+    width: 100%;
+    display: block;
+    flex-shrink: 0;
+}
+
+/* Navigation buttons */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 10;
+    border-radius: 50%;
+    outline: none;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.cattagry {
+    font-size: 24px; /* Adjust font size */
+    color: #333; /* Dark gray color for text */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the text */
+    margin: 20px 0; /* Add vertical spacing */
+  }
+  
+  .collectionnew {
+    font-size: 16px; /* Adjust font size */
+    color: #555; /* Slightly lighter gray color */
+    font-style: italic; /* Italicize the text */
+    text-align: center; /* Center the text */
+    margin: 10px 0; /* Add some vertical spacing */
+  }
+ 
+  .cardcontainer {
+    position: relative;
+    height: 300px;
+    width: 100%;
+
+    border-radius: 10px; /* Adds rounded corners */
+    overflow: hidden; /* Ensures child elements don't overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    display: flex; /* Flexbox for centering content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    color: #fff; /* White text for contrast */
+    font-family: Arial, sans-serif; /* Ensures a clean font */
+  }
+  .cardcategory {
+    width: 250px; /* Fixed width for the card */
+    height: 200px; /* Fixed height for the card */
+    background-color: #d4caca; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    overflow: hidden; /* Prevent content overflow */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack child elements vertically */
+    justify-content: space-between; /* Distribute space between child elements */
+    padding: 20px; /* Inner spacing */
+    text-align: center; /* Center text */
+    font-family: Arial, sans-serif; /* Clean font style */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+    margin: 15px;
+  }
+  
+  .cardcategory:hover {
+    transform: translateY(-10px); /* Lift card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+  }
+  
+  /* Optional content styles */
+  .cardcategory h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+  }
+  
+  .cardcategory p {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0 0;
+  }
+  
+  .cardcategory .card-btn {
+    margin-top: auto; /* Push button to the bottom */
+    background-color: #007bff; /* Blue background for button */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    padding: 10px 15px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-transform: uppercase; /* Uppercase text */
+    font-size: 12px; /* Small text */
+    transition: background-color 0.3s; /* Smooth color change on hover */
+  }
+  
+  .cardcategory .card-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+    .catagoryimg{
+        border-radius: 20px;
+    }
+
+
+    .cardFeaturedProducts{
+        width: 100%;
+        height: 100vh;
+        background-color: #555;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+
+    }
+    .cardProducts{
+        width: 250px; /* Fixed width for the card */
+        height: 80vh; /* Fixed height for the card */
+        background-color: #d4caca; /* White background */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+        overflow: hidden; /* Prevent content overflow */
+        display: flex; /* Flexbox for layout */
+        flex-direction: column; /* Stack child elements vertically */
+        justify-content: space-between; /* Distribute space between child elements */
+        padding: 20px; /* Inner spacing */
+        text-align: center; /* Center text */
+        font-family: Arial, sans-serif; /* Clean font style */
+        transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+        margin: 15px;
+      }
+        
+    .cardFeaturedProductsdiv{
+      width: 250px; /* Fixed width for the card */
+      height: 80vh; /* Fixed height for the card */
+      background-color: #d4caca; /* White background */
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+      overflow: hidden; /* Prevent content overflow */
+      display: flex; /* Flexbox for layout */
+      flex-direction: column; /* Stack child elements vertically */
+      justify-content: space-between; /* Distribute space between child elements */
+      padding: 20px; /* Inner spacing */
+      text-align: center; /* Center text */
+      font-family: Arial, sans-serif; /* Clean font style */
+      transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+      margin: 15px;
+    }
+ 
+ .cardFeaturedProductsimg{
+  width: 250px; /* Fixed width for the card */
+  height: 60vh;
+ }   
+
+
+ .icondiv{
+  
+  
+  bottom: 300px;
+  height: 600px;
+  width: 100px;
+  background-color: #007bff;
+ }
+
+ 
