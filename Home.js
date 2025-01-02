@@ -53,7 +53,7 @@ let arr2=[
     {
         title:"furnitures",
         src:"imgfolder/cardFeaturedProductsimg4.png",
-        src2:"imgfolder/cardFeaturedProductsimg4back.png"
+        src2:"imgfolder/cardFeaturedProductsimg4full.png"
     },
     
 ]
@@ -77,6 +77,25 @@ let iconarr=[
         src:"imgfolder/cardFeaturedProductsimg4.png",
         src2:"imgfolder/cardFeaturedProductsimg4back.png"
     },
+    
+]
+let arr3=[
+    {
+        title:"Smartphone",
+        src: "imgfolder/blog1.jpg",
+       
+    },
+    {
+        title:"Watches",
+        src:"imgfolder/blog2.jpg",
+        
+    }, 
+    {
+        title:"Watches",
+        src:"imgfolder/blog3.jpg",
+      
+    },
+  
     
 ]
 // Set slider to loop automatically
@@ -154,23 +173,114 @@ function cardProducts(){
         div.className = "cardFeaturedProductsdiv";
         
         // Create and append image
-        let img = document.createElement("img");
         let icondiv = document.createElement("div");
         icondiv.className = "icondiv";
+        // div.appendChild(icondiv);
+        div.addEventListener("mouseover", () => {
+          if(!div.contains(icondiv)){
+            div.appendChild(icondiv);
+          }  
+        
+          });
+          div.addEventListener("mouseout", () => {
+            if(div.contains(icondiv)){
+                div.removeChild(icondiv);
+            } // Revert back to the original image
+         
+          });
         div.addEventListener("mouseover", () => {
             img.src = item.src2; // Update with your hover image source
-                    icondiv.innerHTML="helo"
-                 if (!div.contains(icondiv)) {
-        div.appendChild(icondiv); // Append icon div only if not already appended
-      }
-                div.appendChild(icondiv);
+                    
+                
+        
           });
           div.addEventListener("mouseout", () => {
             img.src = item.src; // Revert back to the original image
-              if (div.contains(icondiv)) {
-        div.removeChild(icondiv); // Remove icon div on mouse out
-      }
+         
           });
+        let img = document.createElement("img");
+          img.src = item.src;
+          img.alt = item.title;
+          img.className="cardFeaturedProductsimg";
+          div.appendChild(img);
+          
+          // Create and append title
+          let title = document.createElement("h3");
+          title.innerText = item.title;
+          div.appendChild(title);
+          cardFeaturedProducts.appendChild(div);
+
+        // Append the card to the container
+      });
+}
+function addfasion(){
+    let fasion1=document.querySelector(".fasion1");
+    fasion1.style.backgroundImage = "url('imgfolder/fasion1.png')";
+}
+function NewArrivalsproduct(){
+    let cardFeaturedProducts=document.querySelector(".NewArrivals");
+    arr2.map((item) => {
+        // Create card div
+        // Create card div
+        let div = document.createElement("div");
+        div.className = "cardFeaturedProductsdiv";
+        
+        // Create and append image
+        let icondiv = document.createElement("div");
+        icondiv.className = "icondiv";
+        // div.appendChild(icondiv);
+        div.addEventListener("mouseover", () => {
+          if(!div.contains(icondiv)){
+            div.appendChild(icondiv);
+          }  
+        
+          });
+          div.addEventListener("mouseout", () => {
+            if(div.contains(icondiv)){
+                div.removeChild(icondiv);
+            } // Revert back to the original image
+         
+          });
+        div.addEventListener("mouseover", () => {
+            img.src = item.src2; // Update with your hover image source
+                    
+                
+        
+          });
+          div.addEventListener("mouseout", () => {
+            img.src = item.src; // Revert back to the original image
+         
+          });
+        let img = document.createElement("img");
+          img.src = item.src;
+          img.alt = item.title;
+          img.className="cardFeaturedProductsimg";
+          div.appendChild(img);
+          
+          // Create and append title
+          let title = document.createElement("h3");
+          title.innerText = item.title;
+          div.appendChild(title);
+          cardFeaturedProducts.appendChild(div);
+
+        // Append the card to the container
+      });
+}
+
+function ourblogproduct(){
+    let cardFeaturedProducts=document.querySelector(".ourblog");
+    arr3.map((item) => {
+        // Create card div
+        // Create card div
+        let div = document.createElement("div");
+        div.className = "cardFeaturedourblog";
+        
+        // Create and append image
+        let icondiv = document.createElement("div");
+        icondiv.className = "ourblogdiv";
+        // div.appendChild(icondiv);
+       
+        let img = document.createElement("img");
           img.src = item.src;
           img.alt = item.title;
           img.className="cardFeaturedProductsimg";
@@ -189,3 +299,6 @@ function cardProducts(){
 
 creatcard();
 cardProducts();
+addfasion();
+NewArrivalsproduct();
+ourblogproduct();

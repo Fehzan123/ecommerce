@@ -3,20 +3,32 @@ body, h1, h2, h3, p, a {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    
+}
+h2, p{
+margin: 20px;
 }
 
 body {
     font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .container{
+    
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    margin-top: 100px;
+    
+  
 }
 /* Navigation container styles */
 .navcontainer {
+    height: 50px;
     display: flex;
     justify-content: center;
     margin-top: 0;
@@ -26,6 +38,8 @@ body {
     background-color: #ffffff;
     color: rgb(3, 3, 3);
     z-index: 10;
+    border: 0.01px solid black;
+    position: fixed;
 }
 
 /* Logo styles */
@@ -118,7 +132,7 @@ button:hover {
     color: #333; /* Dark gray color for text */
     font-weight: bold; /* Make the text bold */
     text-align: center; /* Center the text */
-    margin: 20px 0; /* Add vertical spacing */
+  
   }
   
   .collectionnew {
@@ -126,7 +140,7 @@ button:hover {
     color: #555; /* Slightly lighter gray color */
     font-style: italic; /* Italicize the text */
     text-align: center; /* Center the text */
-    margin: 10px 0; /* Add some vertical spacing */
+   
   }
  
   .cardcontainer {
@@ -157,7 +171,7 @@ button:hover {
     text-align: center; /* Center text */
     font-family: Arial, sans-serif; /* Clean font style */
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
-    margin: 15px;
+ 
   }
   
   .cardcategory:hover {
@@ -175,7 +189,7 @@ button:hover {
   .cardcategory p {
     font-size: 14px;
     color: #666;
-    margin: 10px 0 0;
+   
   }
   
   .cardcategory .card-btn {
@@ -205,7 +219,9 @@ button:hover {
         background-color: #555;
         display: flex;
         align-items: center;
+        justify-content: center;
         flex-direction: row;
+       
 
     }
     .cardProducts{
@@ -222,11 +238,11 @@ button:hover {
         text-align: center; /* Center text */
         font-family: Arial, sans-serif; /* Clean font style */
         transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
-        margin: 15px;
+        
       }
         
     .cardFeaturedProductsdiv{
-      width: 250px; /* Fixed width for the card */
+      width: 300px; /* Fixed width for the card */
       height: 80vh; /* Fixed height for the card */
       background-color: #d4caca; /* White background */
       border-radius: 10px; /* Rounded corners */
@@ -239,22 +255,107 @@ button:hover {
       text-align: center; /* Center text */
       font-family: Arial, sans-serif; /* Clean font style */
       transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
-      margin: 15px;
+    padding: 10px;
+      
+
+      cursor: pointer;
+      margin: 20px;
     }
- 
+    .icondiv{
+  
+        position: absolute;
+        
+        top: 1150px;
+        height: 150px;
+        width: 100px;
+        background-color: #007bff;
+        z-index: 10;
+       }
  .cardFeaturedProductsimg{
-  width: 250px; /* Fixed width for the card */
-  height: 60vh;
+  width: 100%; /* Fixed width for the card */
+  height: 70vh;
  }   
+.fasionimag{
+    
+    background-image: url("imgfolder/fasion1.png");
+    height: 356px;
+    width: 50%;
+    background-repeat: no-repeat;
+}
+.fasionimag{
+    height: 360px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.fasion1{
+   
+    background-image: url("imgfolder/fasion1.png");
+    height: 356px;
+    width: 50%;
+    background-repeat: no-repeat;
+}
+.fasion2{
+   
+    background-image: url("imgfolder/banner2.png");
+    height: 356px;
+    width: 50%;
+    background-repeat: no-repeat;
+}.fasionmon1{
+    
+    background-image: url("imgfolder/banner3.png");
+    height: 356px;
+    width: 80%;
+    background-repeat: no-repeat;
+}.fasionmon2{
+   
+    background-image: url("imgfolder/banner4.png");
+    
+    height: 356px;
+    width: 60%;
+    background-repeat: no-repeat;
+}
+.NewArrivals{
+    width: 100%;
+    height: 100vh;
+    background-color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+   
 
+}
+.ourblog{
+    width: 100%;
+    height: 75vh;
+    background-color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+   
+}
+.cardFeaturedourblog{
+    width: 400px; /* Fixed width for the card */
+      height: 60vh; /* Fixed height for the card */
+      background-color: #d4caca; /* White background */
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+      overflow: hidden; /* Prevent content overflow */
+      display: flex; /* Flexbox for layout */
+      flex-direction: column; /* Stack child elements vertically */
+      justify-content: space-between; /* Distribute space between child elements */
+      padding: 20px; /* Inner spacing */
+      text-align: center; /* Center text */
+      font-family: Arial, sans-serif; /* Clean font style */
+      transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+    padding: 10px;
+      
 
- .icondiv{
-  
-  
-  bottom: 300px;
-  height: 600px;
-  width: 100px;
-  background-color: #007bff;
- }
+      cursor: pointer;
+      margin: 10px;
+}
 
  
