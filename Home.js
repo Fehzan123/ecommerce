@@ -98,6 +98,12 @@ let arr3=[
   
     
 ]
+const icons = [
+    { name: "Home", icon: "🏠" },
+    { name: "Search", icon: "🔍" },
+    { name: "Settings", icon: "⚙️" },
+    { name: "Profile", icon: "👤" }
+  ];
 // Set slider to loop automatically
 const autoSlide = () => {
     currentIndex = (currentIndex + 1) % totalSlides;
@@ -217,55 +223,44 @@ function addfasion(){
     let fasion1=document.querySelector(".fasion1");
     fasion1.style.backgroundImage = "url('imgfolder/fasion1.png')";
 }
-function NewArrivalsproduct(){
-    let cardFeaturedProducts=document.querySelector(".NewArrivals");
+function createHoverHandler(div, img, icondiv, item) {
+    div.addEventListener("mouseover", () => {
+        if (!div.contains(icondiv)) div.appendChild(icondiv);
+        img.src = item.src2; // Hover image source
+    });
+    div.addEventListener("mouseout", () => {
+        if (div.contains(icondiv)) div.removeChild(icondiv);
+        img.src = item.src; // Original image source
+    });
+}
+
+function NewArrivalsproduct() {
+    let cardFeaturedProducts = document.querySelector(".NewArrivals");
     arr2.map((item) => {
-        // Create card div
-        // Create card div
         let div = document.createElement("div");
         div.className = "cardFeaturedProductsdiv";
-        
-        // Create and append image
+
         let icondiv = document.createElement("div");
         icondiv.className = "icondiv";
-        // div.appendChild(icondiv);
-        div.addEventListener("mouseover", () => {
-          if(!div.contains(icondiv)){
-            div.appendChild(icondiv);
-          }  
-        
-          });
-          div.addEventListener("mouseout", () => {
-            if(div.contains(icondiv)){
-                div.removeChild(icondiv);
-            } // Revert back to the original image
-         
-          });
-        div.addEventListener("mouseover", () => {
-            img.src = item.src2; // Update with your hover image source
-                    
-                
-        
-          });
-          div.addEventListener("mouseout", () => {
-            img.src = item.src; // Revert back to the original image
-         
-          });
-        let img = document.createElement("img");
-          img.src = item.src;
-          img.alt = item.title;
-          img.className="cardFeaturedProductsimg";
-          div.appendChild(img);
-          
-          // Create and append title
-          let title = document.createElement("h3");
-          title.innerText = item.title;
-          div.appendChild(title);
-          cardFeaturedProducts.appendChild(div);
+       
 
-        // Append the card to the container
-      });
+        let img = document.createElement("img");
+        img.src = item.src;
+        img.alt = item.title;
+        img.className = "cardFeaturedProductsimg";
+        div.appendChild(img);
+
+        let title = document.createElement("h3");
+        title.innerText = item.title;
+        div.appendChild(title);
+
+        createHoverHandler(div, img, icondiv, item);
+        cardFeaturedProducts.appendChild(div);
+    });
 }
+
+
+
 
 function ourblogproduct(){
     let cardFeaturedProducts=document.querySelector(".ourblog");
@@ -295,6 +290,7 @@ function ourblogproduct(){
         // Append the card to the container
       });
 }
+
 
 
 creatcard();
