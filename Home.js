@@ -34,26 +34,31 @@ let arr1=[
 
 let arr2=[
     {
-        title:"Smartphone",
+        title:" Analogue Resin Strap ",
         src: "imgfolder/cardFeaturedProductsimg1.png",
         src2:"imgfolder/cardFeaturedProductsimg1back.png",
         class:"icondiv",
-        className:"icondi"
+        className:"icondi",
+        price:895
+
     },
     {
-        title:"Watches",
+        title:" Ridley High Waist ",
         src:"imgfolder/cardFeaturedProductsimg2.png",
-        src2:"imgfolder/cardFeaturedProductsimg2back.png"
+        src2:"imgfolder/cardFeaturedProductsimg2back.png",
+        price:895
     },
     {
-        title:"Electronics",
+        title:" Blush Beanie ",
         src:"imgfolder/cardFeaturedProductsimg3.png",
-        src2:"imgfolder/cardFeaturedProductsimg3back.png"
+        src2:"imgfolder/cardFeaturedProductsimg3back.png",
+        price:895
     },
     {
-        title:"furnitures",
+        title:" Mercury Tee ",
         src:"imgfolder/cardFeaturedProductsimg4.png",
-        src2:"imgfolder/cardFeaturedProductsimg4full.png"
+        src2:"imgfolder/cardFeaturedProductsimg4full.png",
+        price:895
     },
     
 ]
@@ -104,6 +109,7 @@ const icons = [
     { name: "Settings", icon: "⚙️" },
     { name: "Profile", icon: "👤" }
   ];
+
 // Set slider to loop automatically
 const autoSlide = () => {
     currentIndex = (currentIndex + 1) % totalSlides;
@@ -170,55 +176,75 @@ function creatcard(){
       });
 }
 
-function cardProducts(){
-    let cardFeaturedProducts=document.querySelector(".cardFeaturedProducts");
+function cardProducts() {
+    let cardFeaturedProducts = document.querySelector(".cardFeaturedProducts");
+
     arr2.map((item) => {
-        // Create card div
         // Create card div
         let div = document.createElement("div");
         div.className = "cardFeaturedProductsdiv";
-        
+
         // Create and append image
         let icondiv = document.createElement("div");
         icondiv.className = "icondiv";
-        // div.appendChild(icondiv);
-        div.addEventListener("mouseover", () => {
-          if(!div.contains(icondiv)){
-            div.appendChild(icondiv);
-          }  
-        
-          });
-          div.addEventListener("mouseout", () => {
-            if(div.contains(icondiv)){
-                div.removeChild(icondiv);
-            } // Revert back to the original image
-         
-          });
+
+
         div.addEventListener("mouseover", () => {
             img.src = item.src2; // Update with your hover image source
-                    
-                
-        
-          });
-          div.addEventListener("mouseout", () => {
-            img.src = item.src; // Revert back to the original image
-         
-          });
-        let img = document.createElement("img");
-          img.src = item.src;
-          img.alt = item.title;
-          img.className="cardFeaturedProductsimg";
-          div.appendChild(img);
-          
-          // Create and append title
-          let title = document.createElement("h3");
-          title.innerText = item.title;
-          div.appendChild(title);
-          cardFeaturedProducts.appendChild(div);
+        });
 
+        div.addEventListener("mouseout", () => {
+            img.src = item.src; // Revert back to the original image
+        });
+
+        // Create the image
+        let img = document.createElement("img");
+        img.src = item.src;
+        img.alt = item.title;
+        img.className = "cardFeaturedProductsimg";
+        div.appendChild(img);
+
+        // Create anchor tag for title
+        let anchor = document.createElement("a");
+        anchor.href = "#";  // You can set this to a specific URL
+        anchor.className = "product-title";
+        anchor.draggable = true;
+
+        // Create title
+        let title = document.createElement("h3");
+      
+        title.innerText = item.title;
+        title.style.color = "black";  // Styling the title color
+        anchor.appendChild(title);  // Append title to anchor
+
+        // Create an array with 4 stars
+        const stars = [1, 2, 3, 4]; // Array with 4 items, each representing a star icon
+
+        // Map through the array and create star icons
+        stars.map((star) => {
+            let starIcon = document.createElement("i");
+            starIcon.className = "fa fa-star";  // Assuming you're using Font Awesome for the star icon
+            starIcon.style.marginLeft = "5px"; // Optional: add some space between the stars
+            starIcon.style.marginTop = "15px"; // Optional: add some space between the stars
+            starIcon.style.color = "#FFD700";  // Gold color for the star icon (you can change this)
+            anchor.appendChild(starIcon); // Append the star icon to the anchor tag
+        });
+
+        // Append anchor tag to the card div
+       
+        
+        div.appendChild(anchor);
+        let price = document.createElement("div");
+       price.innerHTML=`$${item.price}`;
+       div.appendChild(price);
+        // Styling the title color
+        
         // Append the card to the container
-      });
+        cardFeaturedProducts.appendChild(div);
+    });
 }
+
+
 function addfasion(){
     let fasion1=document.querySelector(".fasion1");
     fasion1.style.backgroundImage = "url('imgfolder/fasion1.png')";
@@ -242,7 +268,6 @@ function NewArrivalsproduct() {
 
         let icondiv = document.createElement("div");
         icondiv.className = "icondiv";
-       
 
         let img = document.createElement("img");
         img.src = item.src;
@@ -254,10 +279,27 @@ function NewArrivalsproduct() {
         title.innerText = item.title;
         div.appendChild(title);
 
-        createHoverHandler(div, img, icondiv, item);
+        let prostar = document.createElement("div");
+        prostar.className = "prostar";
+
+        const stars = [1, 2, 3, 4];
+        stars.forEach((star) => {
+            let starIcon = document.createElement("i");
+            starIcon.className = "fa fa-star";  // Ensure Font Awesome is loaded
+            starIcon.style.marginLeft = "5px";
+            starIcon.style.marginTop = "15px";
+            starIcon.style.color = "#FFD700";
+            prostar.appendChild(starIcon);
+        });
+        div.appendChild(prostar);
+        let pricediv = document.createElement("div");
+        pricediv.innerHTML=`$${item.price}`;
+        div.appendChild(pricediv);
+        createHoverHandler(div, img, icondiv, item); // Ensure createHoverHandler is defined
         cardFeaturedProducts.appendChild(div);
     });
 }
+
 
 
 

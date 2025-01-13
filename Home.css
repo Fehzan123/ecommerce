@@ -28,7 +28,7 @@ body {
 }
 /* Navigation container styles */
 .navcontainer {
-    height: 80px;
+    height: 50px;
     display: flex;
     justify-content: center;
     margin-top: 0;
@@ -108,7 +108,17 @@ body {
     display: block;
     flex-shrink: 0;
 }
-
+.promo-text {
+  position: absolute;
+  top: 20%;  /* Adjust vertical position */
+  left: 50%;
+  transform: translateX(-50%);  /* Center horizontally */
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Adds shadow for better readability */
+  z-index: 10;  /* Ensures the text stays on top of the images */
+}
 /* Navigation buttons */
 button {
     position: absolute;
@@ -287,8 +297,14 @@ button:hover {
        }
  .cardFeaturedProductsimg{
   width: 100%; /* Fixed width for the card */
-  height: 70vh;
+  height: 60vh;
  }   
+ .prostar{
+  width: 100%;
+  position: flex;
+  align-items: center;
+  flex-direction: row;
+ }
 .fasionimag{
     
     background-image: url("imgfolder/fasion1.png");

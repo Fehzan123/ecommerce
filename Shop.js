@@ -38,8 +38,6 @@ function displayProducts(products) {
         productCard.innerHTML = `
             <img src="${product.image}" alt="${product.title}">
             <h3>${product.title.substring(0,20)}...</h3>
-            <h3>${product.title.substring(0,20)}...</h3>
-            <h3>${product.title.substring(0,20)}...</h3>
             <p>${product.description.substring(0, 20)}...</p>
             <div class="price">$${product.price}</div>
             <button>Add to cart</button>`;

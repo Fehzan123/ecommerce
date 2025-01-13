@@ -1,0 +1,39 @@
+.navcontainer {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: rgb(3, 3, 3);
+    z-index: 10;
+    border: 0.01px solid black;
+    position: fixed;
+    bottom: 85vh;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navigation menu styles */
+.navmenu {
+    display: flex;
+    gap: 15px;
+}
+
+.navmenu a {
+    text-decoration: none;
+    color: rgb(7, 7, 7);
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navmenu a:hover {
+    background-color: #555;
+    color: #fff;
+    border-radius: 5px;
+}

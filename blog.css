@@ -1,0 +1,178 @@
+body, h1, h2, h3, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    
+}
+h2, p{
+margin: 20px;
+}
+h2{
+    margin-top: 80px;
+
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.navcontainer {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: rgb(3, 3, 3);
+    z-index: 10;
+    border: 0.01px solid black;
+    position: fixed;
+    bottom: 85vh;
+    
+    
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navigation menu styles */
+.navmenu {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.navmenu a {
+    text-decoration: none;
+    color: rgb(7, 7, 7);
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navmenu a:hover {
+    background-color: #555;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.cattagry {
+    font-size: 24px; /* Adjust font size */
+    color: #333; /* Dark gray color for text */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the text */
+  
+  }
+  
+  .collectionnew {
+    font-size: 16px; /* Adjust font size */
+    color: #555; /* Slightly lighter gray color */
+    font-style: italic; /* Italicize the text */
+    text-align: center; /* Center the text */
+   
+  }
+ 
+ .ourblog{
+    width: 100%;
+    height: 75vh;
+    background-color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 50px;
+   
+}
+.cardFeaturedourblog{
+    width: 400px; /* Fixed width for the card */
+      height: 60vh; /* Fixed height for the card */
+      background-color: #d4caca; /* White background */
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+      overflow: hidden; /* Prevent content overflow */
+      display: flex; /* Flexbox for layout */
+      flex-direction: column; /* Stack child elements vertically */
+      justify-content: space-between; /* Distribute space between child elements */
+      padding: 20px; /* Inner spacing */
+      text-align: center; /* Center text */
+      font-family: Arial, sans-serif; /* Clean font style */
+      transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+    padding: 10px;
+      
+
+      cursor: pointer;
+      margin: 10px;
+}
+.footer {
+    width: 100%;
+    background-color: #282828;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+  }
+  
+  .footer-section h3 {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin: 5px 0;
+  }
+  
+  .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #ff6f61;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 1.2em;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #ff6f61;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+  }
+  
