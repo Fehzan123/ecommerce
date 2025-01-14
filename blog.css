@@ -1,66 +1,82 @@
-body, h1, h2, h3, p, a {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 
-    
-}
-h2, p{
-margin: 20px;
-}
-h2{
-    margin-top: 80px;
-
-}
 body {
     font-family: Arial, sans-serif;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+   
+   
+    margin: 0;
+    padding: 0;
 }
 
+/* Default Navigation Styles */
 .navcontainer {
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    margin-top: 0;
-    align-items: center;
-    width: 100%;
-    padding: 10px 20px;
-    background-color: #ffffff;
-    color: rgb(3, 3, 3);
-    z-index: 10;
-    border: 0.01px solid black;
-    position: fixed;
-    bottom: 85vh;
-    
-    
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  /* padding-right: 10px; */
+  background-color: #ffffff;
+  color: rgb(3, 3, 3);
+  z-index: 10;
+  border: 0.01px solid black;
+  
+  position: fixed;
+  top: 0;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-/* Navigation menu styles */
 .navmenu {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
+  display: flex;
+  gap: 15px;
 }
 
 .navmenu a {
-    text-decoration: none;
-    color: rgb(7, 7, 7);
-    padding: 5px 10px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  color: rgb(7, 7, 7);
+  padding: 5px 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navmenu a:hover {
-    background-color: #555;
-    color: #fff;
-    border-radius: 5px;
+  background-color: #555;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* Home Page Styles */
+#home-page .navcontainer {
+  background-color: #f0f8ff; /* Light blue */
+  border-bottom: 2px solid #007acc;
+}
+
+#home-page .navmenu a {
+  color: #007acc;
+}
+
+/* About Page Styles */
+#about-page .navcontainer {
+  background-color: #fffbe6; /* Light yellow */
+  border-bottom: 2px solid #ffcc00;
+}
+
+#about-page .navmenu a {
+  color: #ffcc00;
+}
+
+/* Contact Page Styles */
+#contact-page .navcontainer {
+  background-color: #ffe6e6; /* Light pink */
+  border-bottom: 2px solid #ff6666;
+}
+
+#contact-page .navmenu a {
+  color: #ff6666;
 }
 
 .cattagry {
@@ -68,7 +84,7 @@ body {
     color: #333; /* Dark gray color for text */
     font-weight: bold; /* Make the text bold */
     text-align: center; /* Center the text */
-  
+      margin-top: 100px;
   }
   
   .collectionnew {
@@ -90,6 +106,7 @@ body {
     margin-top: 50px;
    
 }
+
 .cardFeaturedourblog{
     width: 400px; /* Fixed width for the card */
       height: 60vh; /* Fixed height for the card */
